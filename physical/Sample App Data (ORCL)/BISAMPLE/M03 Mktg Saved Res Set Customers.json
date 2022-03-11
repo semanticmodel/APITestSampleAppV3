@@ -1,0 +1,6 @@
+{
+  "physicalTable": {
+    "name": "M03 Mktg Saved Res Set Customers",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.SAMP_M_SR_CUSTOMERS"
+  }
+}

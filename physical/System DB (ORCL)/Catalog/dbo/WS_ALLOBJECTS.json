@@ -1,0 +1,83 @@
+{
+  "physicalTable" : {
+    "name" : "WS_ALLOBJECTS",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "CREATEDTIME",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "OWNER",
+      "dataType" : "VARCHAR",
+      "length" : 50,
+      "nullable" : true
+    }, {
+      "name" : "LASTMODIFIEDTIME",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "PATH_L5",
+      "dataType" : "VARCHAR",
+      "length" : 100,
+      "nullable" : true
+    }, {
+      "name" : "SIGNATURE",
+      "dataType" : "VARCHAR",
+      "length" : 50,
+      "nullable" : true
+    }, {
+      "name" : "OBJECTNAME",
+      "dataType" : "VARCHAR",
+      "length" : 150,
+      "nullable" : true
+    }, {
+      "name" : "PATH_L3",
+      "dataType" : "VARCHAR",
+      "length" : 100,
+      "nullable" : true
+    }, {
+      "name" : "PATH_L4",
+      "dataType" : "VARCHAR",
+      "length" : 100,
+      "nullable" : true
+    }, {
+      "name" : "PATH_L1",
+      "dataType" : "VARCHAR",
+      "length" : 100,
+      "nullable" : false
+    }, {
+      "name" : "PATH_L6",
+      "dataType" : "VARCHAR",
+      "length" : 400,
+      "nullable" : true
+    }, {
+      "name" : "FOLDER",
+      "dataType" : "VARCHAR",
+      "length" : 300,
+      "nullable" : true
+    }, {
+      "name" : "PATH_L2",
+      "dataType" : "VARCHAR",
+      "length" : 100,
+      "nullable" : true
+    }, {
+      "name" : "SEQUENCEID",
+      "dataType" : "DOUBLE",
+      "length" : 15,
+      "nullable" : false
+    }, {
+      "name" : "PATH",
+      "dataType" : "VARCHAR",
+      "length" : 400,
+      "nullable" : false
+    }, {
+      "name" : "DESCRIPTION",
+      "dataType" : "VARCHAR",
+      "length" : 500,
+      "nullable" : true
+    } ],
+    "additionalKeys" : [ [ "PATH" ], [ "SEQUENCEID" ] ]
+  }
+}

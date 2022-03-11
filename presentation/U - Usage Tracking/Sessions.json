@@ -1,0 +1,27 @@
+{
+  "presentationTable" : {
+    "name" : "Sessions",
+    "tags" : [ "Samp Relational" ],
+    "presentationColumns" : [ {
+      "name" : "Hash ID",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Hash ID"
+    }, {
+      "name" : "Session ID",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Session ID"
+    }, {
+      "name" : "EC ID",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.EC ID"
+    }, {
+      "name" : "Tenant ID",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Tenant ID"
+    }, {
+      "name" : "Service Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Service Name"
+    } ]
+  }
+}

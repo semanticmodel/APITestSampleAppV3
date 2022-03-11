@@ -1,0 +1,14 @@
+{
+  "physicalTable": {
+    "name": "S_NQ_ACCT_Dim",
+    "sourceTable": "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT",
+    "additionalKeys": [
+      [
+        "SAW_SRC_PATH"
+      ],
+      [
+        "ID"
+      ]
+    ]
+  }
+}

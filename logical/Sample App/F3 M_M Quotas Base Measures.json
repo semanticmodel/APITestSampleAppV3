@@ -1,0 +1,38 @@
+{
+  "logicalTable" : {
+    "name" : "F3 M:M Quotas Base Measures",
+    "tags" : [ "Samp Relational" ],
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "8- Quota Amount",
+      "dataType" : "INT",
+      "writeable" : true,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Fact Quotas",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas.VALUE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Sample App.D7 Orders (Facts Attributes).Total Orders", "logicalLevel:Sample App.D6b Customers (SCD Session).Customers Total", "logicalLevel:Sample App.D5 Sales Rep (Parent Child Hier).Sales Reps Total", "logicalLevel:Sample App.D6a Customers (SCD ViewQuery).Customers Total", "logicalLevel:Sample App.D6 Customers (Snowflakes).Customers Total" ]
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "LTS1 Fact Quotas",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Sample App.D0 Time.Month", "logicalLevel:Sample App.D4 Offices and Channels (M:M Joins).Channel Detail", "logicalLevel:Sample App.D1 Products (Level Based Hier).Products Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ]
+  }
+}

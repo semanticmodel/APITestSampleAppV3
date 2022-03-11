@@ -1,0 +1,38 @@
+{
+  "presentationTable" : {
+    "name" : "Point in Time View Query",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Point in Time Query" ],
+    "presentationColumns" : [ {
+      "name" : "QC0  Customer Number",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6a Customers (SCD ViewQuery).QC0  Customer Number"
+    }, {
+      "name" : "QC1  Customer Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6a Customers (SCD ViewQuery).QC1  Customer Name"
+    }, {
+      "name" : "QC4  Start_Time",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6a Customers (SCD ViewQuery).QC4  Start_Time"
+    }, {
+      "name" : "QC5  End_Time",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6a Customers (SCD ViewQuery).QC5  End_Time"
+    }, {
+      "name" : "QC7  Marital Status",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6a Customers (SCD ViewQuery).QC7  Marital Status"
+    }, {
+      "name" : "QC7x Changed Marital Status",
+      "description" : "Help : \r\nStores the customer segment ID.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6a Customers (SCD ViewQuery).QC7x Changed Marital Status"
+    }, {
+      "name" : "QC8 Income Level",
+      "description" : "Help : \r\nStores the customer industry description.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6a Customers (SCD ViewQuery).QC8 Income Level"
+    } ]
+  }
+}

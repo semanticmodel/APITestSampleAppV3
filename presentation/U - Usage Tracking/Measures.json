@@ -1,0 +1,183 @@
+{
+  "presentationTable" : {
+    "name" : "Measures",
+    "description" : "Basic nQuire Usage Metrics that use SUM, MAX, AVG COUNT aggregration rules.",
+    "tags" : [ "Samp Relational" ],
+    "presentationColumns" : [ {
+      "name" : "# of Queries",
+      "description" : "A count of all queries executed against the nQuire Server.  Count is the aggregration rule for this calc",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.# of Queries",
+      "alternateNames" : [ "Query Count" ],
+      "localization" : {
+        "localizationKey" : "# of Queries",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Query_Count)"
+      }
+    }, {
+      "name" : "Max Total Time in Secs",
+      "description" : "Maximum amount of time (total) for a request.  MAX is the aggregration rule for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Max Total Time in Secs",
+      "localization" : {
+        "localizationKey" : "Max Total Time in Secs",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Max_Total_Time_in_Secs)"
+      }
+    }, {
+      "name" : "Avg Total Time In Secs",
+      "description" : "Average amount of time (total time) for a request.  AVG is the aggregration rule for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Avg Total Time In Secs",
+      "localization" : {
+        "localizationKey" : "Avg Total Time In Secs",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Avg_Total_Time_In_Secs)"
+      }
+    }, {
+      "name" : "Total Time in Secs",
+      "description" : "Total amount of time for a request. SUM is the aggregration rule for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Total Time in Secs",
+      "localization" : {
+        "localizationKey" : "Total Time in Secs",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Total_Time_in_Secs)"
+      }
+    }, {
+      "name" : "Max Row Count",
+      "description" : "Maximum number of rows returned for a request.  MAX is the aggregration rule for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Max Row Count",
+      "localization" : {
+        "localizationKey" : "Max Row Count",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Max_Row_Count)"
+      }
+    }, {
+      "name" : "Avg Row Count",
+      "description" : "Average number of rows returned for a request.  AVG is the aggregration rule for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Avg Row Count",
+      "localization" : {
+        "localizationKey" : "Avg Row Count",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Avg_Row_Count)"
+      }
+    }, {
+      "name" : "Max Compile Time in Secs",
+      "description" : "Maximum amount of time in seconds for a request to be complied on the nQuire Server.  MAX is the aggregration rule for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Max Compile Time in Secs",
+      "localization" : {
+        "localizationKey" : "Max Compile Time in Secs",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Max_Compile_Time_in_Secs)"
+      }
+    }, {
+      "name" : "Avg Compile Time In Secs",
+      "description" : "Average amount of time in seconds for a request to be complied on the nQuire Server.  AVG is the aggregration rule for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Avg Compile Time In Secs",
+      "localization" : {
+        "localizationKey" : "Avg Compile Time In Secs",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Avg_Compile_Time_In_Secs)"
+      }
+    }, {
+      "name" : "Max Time Spent in dB",
+      "description" : "Maximum amount of time spent in the DataSource (Database) for a request.  MAX is the aggregration rule for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Max Time Spent in dB",
+      "localization" : {
+        "localizationKey" : "Max Time Spent in dB",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Max_Time_Spent_in_dB)"
+      }
+    }, {
+      "name" : "Avg Time Spent in dB",
+      "description" : "AVG amount of time spent in the DataSource (Database) for a request.  AVG is the aggregration rule for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Avg Time Spent in dB",
+      "localization" : {
+        "localizationKey" : "Avg Time Spent in dB",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Avg_Time_Spent_in_dB)"
+      }
+    }, {
+      "name" : "Total Time Spent in dB",
+      "description" : "Total amount of time spent in the DataSource (Database) for a request.  SUM is the aggregration rule for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Total Time Spent in dB",
+      "localization" : {
+        "localizationKey" : "Total Time Spent in dB",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Total_Time_Spent_in_dB)"
+      }
+    }, {
+      "name" : "Total Num dB Queries",
+      "description" : "Total Number of Queries executed on the nQuire server.  SUM is the aggregration rulee for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Total Num dB Queries",
+      "localization" : {
+        "localizationKey" : "Total Num dB Queries",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Total_Num_dB_Queries)"
+      }
+    }, {
+      "name" : "Avg Num dB Queries",
+      "description" : "Average Number of Queries executed on the nQuire server.  AVG is the aggregration rulee for this calculation.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Avg Num dB Queries",
+      "localization" : {
+        "localizationKey" : "Avg Num dB Queries",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures_Avg_Num_dB_Queries)"
+      }
+    }, {
+      "name" : "Number of cache entries inserted",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Number of cache entries inserted"
+    }, {
+      "name" : "Number of cache hits",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Number of cache hits"
+    }, {
+      "name" : "Dashboard Count",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Dashboard Count"
+    }, {
+      "name" : "Dashboard Page Count",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Dashboard Page Count"
+    }, {
+      "name" : "Report Count",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Report Count"
+    }, {
+      "name" : "# of Distinct Users",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.# of Distinct Users"
+    }, {
+      "name" : "% of Cache Hits",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.% of Cache Hits"
+    }, {
+      "name" : "# of Queries Hitting Cache",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.# of Queries Hitting Cache"
+    }, {
+      "name" : "# of Users",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.# of Users"
+    }, {
+      "name" : "# of Sessions",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.# of Sessions"
+    }, {
+      "name" : "Min Start Time",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Min Start Time"
+    }, {
+      "name" : "Max End Time",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Max End Time"
+    }, {
+      "name" : "Minutes Start to End",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.Minutes Start to End",
+      "alternateNames" : [ "Minutes Start to End#1" ]
+    } ],
+    "localization" : {
+      "localizationKey" : "Measures",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Measures)"
+    }
+  }
+}

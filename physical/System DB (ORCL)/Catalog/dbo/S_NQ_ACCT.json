@@ -1,0 +1,188 @@
+{
+  "physicalTable" : {
+    "name" : "S_NQ_ACCT",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "HASH_ID",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : false
+    }, {
+      "name" : "USER_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : true
+    }, {
+      "name" : "IMPERSONATOR_USER_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : true
+    }, {
+      "name" : "TOTAL_TIME_SEC",
+      "dataType" : "DOUBLE",
+      "length" : 10,
+      "nullable" : true
+    }, {
+      "name" : "COMPILE_TIME_SEC",
+      "dataType" : "DOUBLE",
+      "length" : 10,
+      "nullable" : true
+    }, {
+      "name" : "START_TS",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "START_DT",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "START_HOUR_MIN",
+      "dataType" : "CHAR",
+      "length" : 5,
+      "nullable" : true
+    }, {
+      "name" : "SERVICE_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : false
+    }, {
+      "name" : "QUERY_SRC_CD",
+      "dataType" : "VARCHAR",
+      "length" : 30,
+      "nullable" : true
+    }, {
+      "name" : "SESSION_ID",
+      "dataType" : "DOUBLE",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "QUERY_TEXT",
+      "dataType" : "VARCHAR",
+      "length" : 1024,
+      "nullable" : true
+    }, {
+      "name" : "SUCCESS_FLG",
+      "dataType" : "DOUBLE",
+      "length" : 10,
+      "nullable" : true
+    }, {
+      "name" : "NUM_DB_QUERY",
+      "dataType" : "DOUBLE",
+      "length" : 10,
+      "nullable" : true
+    }, {
+      "name" : "ID",
+      "dataType" : "VARCHAR",
+      "length" : 50,
+      "nullable" : false
+    }, {
+      "name" : "SUBJECT_AREA_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : true
+    }, {
+      "name" : "QUERY_BLOB",
+      "dataType" : "LONGVARCHAR",
+      "length" : 4000,
+      "nullable" : true
+    }, {
+      "name" : "CACHE_IND_FLG",
+      "dataType" : "CHAR",
+      "length" : 1,
+      "nullable" : false
+    }, {
+      "name" : "END_TS",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "NODE_ID",
+      "dataType" : "VARCHAR",
+      "length" : 100,
+      "nullable" : true
+    }, {
+      "name" : "SAW_DASHBOARD_PG",
+      "dataType" : "VARCHAR",
+      "length" : 150,
+      "nullable" : true
+    }, {
+      "name" : "NUM_CACHE_INSERTED",
+      "dataType" : "DOUBLE",
+      "length" : 10,
+      "nullable" : true
+    }, {
+      "name" : "TENANT_ID",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : false
+    }, {
+      "name" : "ERROR_TEXT",
+      "dataType" : "VARCHAR",
+      "length" : 250,
+      "nullable" : true
+    }, {
+      "name" : "END_DT",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "SAW_DASHBOARD",
+      "dataType" : "VARCHAR",
+      "length" : 150,
+      "nullable" : true
+    }, {
+      "name" : "REPOSITORY_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : true
+    }, {
+      "name" : "SAW_SRC_PATH",
+      "dataType" : "VARCHAR",
+      "length" : 250,
+      "nullable" : true
+    }, {
+      "name" : "ROW_COUNT",
+      "dataType" : "DOUBLE",
+      "length" : 10,
+      "nullable" : true
+    }, {
+      "name" : "PRESENTATION_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : true
+    }, {
+      "name" : "CUM_DB_TIME_SEC",
+      "dataType" : "DOUBLE",
+      "length" : 10,
+      "nullable" : true
+    }, {
+      "name" : "END_HOUR_MIN",
+      "dataType" : "CHAR",
+      "length" : 5,
+      "nullable" : true
+    }, {
+      "name" : "ECID",
+      "dataType" : "VARCHAR",
+      "length" : 1024,
+      "nullable" : false
+    }, {
+      "name" : "CUM_NUM_DB_ROW",
+      "dataType" : "DOUBLE",
+      "length" : 10,
+      "nullable" : true
+    }, {
+      "name" : "NUM_CACHE_HITS",
+      "dataType" : "DOUBLE",
+      "length" : 10,
+      "nullable" : true
+    }, {
+      "name" : "QUERY_KEY",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : true
+    } ],
+    "additionalKeys" : [ [ "ID" ], [ "SAW_SRC_PATH" ] ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "presentationTable" : {
+    "name" : "Office Geo Codes",
+    "description" : "This folder contains Office Geographic details like latitude, longitude and so on.",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Cust Geo Codes#1" ],
+    "presentationColumns" : [ {
+      "name" : "D61  Iso Country code3",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.D61  Iso Country code3"
+    }, {
+      "name" : "C62  Ctry Cd3 State Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.C62  Ctry Cd3 State Name"
+    }, {
+      "name" : "C63  Ctry Cd3 State Name City",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.C63  Ctry Cd3 State Name City"
+    }, {
+      "name" : "D64  Latitude",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.D64  Latitude"
+    }, {
+      "name" : "D65  Longitude",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.D65  Longitude"
+    }, {
+      "name" : "D67  Geo Postal Code",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.D67  Geo Postal Code"
+    } ],
+    "permissions" : [ {
+      "accessor" : "role:BIConsumer",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:gkendal",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BIAdministrator",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:weblogic",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:hmayes",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BIAuthor",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BISystem",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:satkins",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:abell",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:dnoonan",
+      "access" : "READ"
+    } ],
+    "localization" : {
+      "localizationKey" : "Office Geo Codes",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Geo_Codes)"
+    }
+  }
+}

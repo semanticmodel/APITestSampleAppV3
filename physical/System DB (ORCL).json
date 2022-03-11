@@ -1,0 +1,202 @@
+{
+  "database" : {
+    "name" : "System DB (ORCL)",
+    "databaseType" : "ORACLE_DATABASE",
+    "connectionPools" : [ {
+      "name" : "UT Connection Pool",
+      "description" : "Connection pool for Sample Usage Tracking db source. This connection is the same as the Sample relational source, as the UT tables are stored in the same sample db schema.\r\n\r\nInstead of editing connectivity parameters in each connection pool, update the RPD and Session variables that hold that information (Manage > Variables)",
+      "callInterface" : "OCI_12C",
+      "maxConnections" : 10,
+      "requiresFullyQualifedTableNames" : false,
+      "connectionTimeoutUnit" : "NEVER",
+      "multithreaded" : true,
+      "supportParams" : true,
+      "writeBackConfig" : {
+        "dbSupportsUnicode" : false,
+        "bulkInsertBufferSize" : 10485760,
+        "transactionBoundary" : 0
+      }
+    }, {
+      "name" : "BSC",
+      "description" : "Connection pool for Scorecards Annotations. This connection is the same as the Sample relational source, as the annotations tables are stored in the same sample db schema.\r\n\r\nInstead of editing connectivity parameters in each connection pool, update the RPD and Session variables that hold that information (Manage > Variables)",
+      "callInterface" : "OCI_12C",
+      "maxConnections" : 10,
+      "requiresFullyQualifedTableNames" : false,
+      "connectionTimeout" : 5,
+      "connectionTimeoutUnit" : "MINUTES",
+      "multithreaded" : true,
+      "supportParams" : true,
+      "writeBackConfig" : {
+        "dbSupportsUnicode" : false,
+        "bulkInsertBufferSize" : 10485760,
+        "transactionBoundary" : 1000,
+        "tempTablePrefix" : "TT"
+      }
+    }, {
+      "name" : "SampleApp Init Blocks",
+      "callInterface" : "OCI_12C",
+      "maxConnections" : 10,
+      "requiresFullyQualifedTableNames" : false,
+      "connectionTimeoutUnit" : "NEVER",
+      "multithreaded" : true,
+      "supportParams" : true,
+      "writeBackConfig" : {
+        "dbSupportsUnicode" : false,
+        "bulkInsertBufferSize" : 10485760,
+        "transactionBoundary" : 1000,
+        "tempTablePrefix" : "TT"
+      }
+    } ],
+    "featureOverrides" : [ {
+      "name" : "LENGTH_SUPPORTED",
+      "value" : false
+    }, {
+      "name" : "RAND_SUPPORTED",
+      "value" : false
+    }, {
+      "name" : "REPEAT_SUPPORTED",
+      "value" : false
+    }, {
+      "name" : "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+      "value" : false
+    }, {
+      "name" : "FRACTIONAL_SECOND_PRECISION",
+      "value" : 0
+    }, {
+      "name" : "MAX_BULK_FETCH_BUFFER_SIZE",
+      "value" : 327680
+    }, {
+      "name" : "DEFAULT_BULK_FETCH_ROW_COUNT",
+      "value" : 100
+    } ],
+    "virtualPrivateDatabase" : false,
+    "crmMetadataTables" : false,
+    "allowDirectDatabaseRequests" : false,
+    "allowPopulateQueries" : false,
+    "joins" : [ {
+      "leftTable" : "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR",
+      "rightTable" : "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.LOGICAL_QUERY_ID",
+        "rightColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.ID"
+      } ]
+    }, {
+      "leftTable" : "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT",
+      "rightTable" : "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.LOGICAL_QUERY_ID",
+        "rightColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.ID"
+      } ]
+    }, {
+      "leftTable" : "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT",
+      "rightTable" : "physicalTable:System DB (ORCL).Catalog.dbo.UT_SOURCE",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.LOGICAL_QUERY_ID",
+        "rightColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.UT_SOURCE.id"
+      } ]
+    }, {
+      "leftTable" : "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT",
+      "rightTable" : "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ID",
+        "rightColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.LOGICAL_QUERY_ID"
+      } ]
+    }, {
+      "leftTable" : "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT",
+      "rightTable" : "physicalTable:System DB (ORCL).Catalog.dbo.UT_SOURCE",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ID",
+        "rightColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.UT_SOURCE.id"
+      } ]
+    }, {
+      "leftTable" : "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT",
+      "rightTable" : "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ID",
+        "rightColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.ID"
+      } ]
+    }, {
+      "leftTable" : "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT",
+      "rightTable" : "physicalTable:System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SAW_SRC_PATH",
+        "rightColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH"
+      } ]
+    }, {
+      "leftTable" : "physicalTable:System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+      "rightTable" : "physicalTable:System DB (ORCL).Catalog.dbo.WS_DASHBOARD",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH",
+        "rightColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.WS_DASHBOARD.DASHBOARDPAGEPATH"
+      } ]
+    }, {
+      "leftTable" : "physicalTable:System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+      "rightTable" : "physicalTable:System DB (ORCL).Catalog.dbo.WS_ANALYSIS",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH",
+        "rightColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.WS_ANALYSIS.PATH"
+      } ]
+    }, {
+      "leftTable" : "physicalTable:System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+      "rightTable" : "physicalTable:System DB (ORCL).Catalog.dbo.WS_DBPROMPT",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH",
+        "rightColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.WS_DBPROMPT.PATH"
+      } ]
+    }, {
+      "leftTable" : "physicalTable:System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+      "rightTable" : "physicalTable:System DB (ORCL).Catalog.dbo.WS_FILTER",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH",
+        "rightColumn" : "physicalColumn:System DB (ORCL).Catalog.dbo.WS_FILTER.PATH"
+      } ]
+    } ],
+    "queryLimits" : [ {
+      "accessor" : "role:BIConsumer",
+      "maxRowSetting" : "INHERIT",
+      "maxRows" : 100000,
+      "maxTimeSetting" : "INHERIT",
+      "maxTime" : 600,
+      "directDatabaseRequests" : "ALLOW"
+    }, {
+      "accessor" : "role:BIAdministrator",
+      "maxRowSetting" : "INHERIT",
+      "maxRows" : 100000,
+      "maxTimeSetting" : "INHERIT",
+      "maxTime" : 600,
+      "directDatabaseRequests" : "ALLOW"
+    }, {
+      "accessor" : "role:",
+      "maxRowSetting" : "INHERIT",
+      "maxRows" : 100000,
+      "maxTimeSetting" : "INHERIT",
+      "maxTime" : 600,
+      "directDatabaseRequests" : "ALLOW"
+    }, {
+      "accessor" : "role:BIAuthor",
+      "maxRowSetting" : "INHERIT",
+      "maxRows" : 100000,
+      "maxTimeSetting" : "INHERIT",
+      "maxTime" : 600,
+      "directDatabaseRequests" : "ALLOW"
+    }, {
+      "accessor" : "role:BISystem",
+      "maxRowSetting" : "INHERIT",
+      "maxRows" : 100000,
+      "maxTimeSetting" : "INHERIT",
+      "maxTime" : 600,
+      "directDatabaseRequests" : "ALLOW"
+    } ]
+  }
+}

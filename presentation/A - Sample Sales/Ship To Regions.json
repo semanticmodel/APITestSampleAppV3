@@ -1,0 +1,137 @@
+{
+  "presentationTable" : {
+    "name" : "Ship To Regions",
+    "description" : "This folder contains additional Office attributes like Office Region, Country, State, City and so on.",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Ship" ],
+    "presentationColumns" : [ {
+      "name" : "R50  Region",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R50  Region",
+      "alternateNames" : [ "Region" ],
+      "localization" : {
+        "localizationKey" : "R50  Region",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions_R50__Region)"
+      }
+    }, {
+      "name" : "R51  Area",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R51  Area",
+      "localization" : {
+        "localizationKey" : "R51  Area",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions_R51__Area)"
+      }
+    }, {
+      "name" : "R52  Country Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R52  Country Name",
+      "alternateNames" : [ "Country" ],
+      "localization" : {
+        "localizationKey" : "R52  Country Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions_R52__Country_Name)"
+      }
+    }, {
+      "name" : "R53  State Province",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R53  State Province",
+      "alternateNames" : [ "State" ],
+      "localization" : {
+        "localizationKey" : "R53  State Province",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions_R53__State_Province)"
+      }
+    }, {
+      "name" : "R54  State Code",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R54  State Code",
+      "localization" : {
+        "localizationKey" : "R54  State Code",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions_R54__State_Code)"
+      }
+    }, {
+      "name" : "R55  City",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R55  City",
+      "alternateNames" : [ "City" ],
+      "localization" : {
+        "localizationKey" : "R55  City",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions_R55__City)"
+      }
+    }, {
+      "name" : "R56  Postal Code",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R56  Postal Code",
+      "localization" : {
+        "localizationKey" : "R56  Postal Code",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions_R56__Postal_Code)"
+      }
+    }, {
+      "name" : "R57  Address 1",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R57  Address 1",
+      "localization" : {
+        "localizationKey" : "R57  Address 1",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions_R57__Address_1)"
+      }
+    }, {
+      "name" : "R58  Address 2",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R58  Address 2",
+      "localization" : {
+        "localizationKey" : "R58  Address 2",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions_R58__Address_2)"
+      }
+    }, {
+      "name" : "R59  Establishment Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R59  Establishment Name",
+      "localization" : {
+        "localizationKey" : "R59  Establishment Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions_R59__Establishment_Name)"
+      }
+    }, {
+      "name" : "R60  Address_Key",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R60  Address_Key",
+      "alternateNames" : [ "Location" ],
+      "localization" : {
+        "localizationKey" : "R60  Address_Key",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions_R60__Address_Key)"
+      }
+    } ],
+    "permissions" : [ {
+      "accessor" : "role:BIConsumer",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:gkendal",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BIAdministrator",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:weblogic",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:hmayes",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BIAuthor",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BISystem",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:satkins",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:abell",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:dnoonan",
+      "access" : "READ"
+    } ],
+    "localization" : {
+      "localizationKey" : "Ship To Regions",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Regions)"
+    }
+  }
+}

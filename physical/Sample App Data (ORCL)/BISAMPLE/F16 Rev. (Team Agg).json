@@ -1,0 +1,15 @@
+{
+  "physicalTable": {
+    "name": "F16 Rev. (Team Agg)",
+    "description": "ZZZ - Not yet filled\r\n",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.SAMP_REVENUE_F",
+    "caching": {
+      "enable": true
+    },
+    "additionalKeys": [
+      [
+        "Order_Key"
+      ]
+    ]
+  }
+}

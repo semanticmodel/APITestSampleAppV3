@@ -1,0 +1,13 @@
+{
+  "physicalTable": {
+    "name": "D64 Customers (SCD Time Temporal Session)",
+    "description": "Customer Alias: Alias of the customer dimension table",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.SAMP_CUSTOMERS_SCD",
+    "additionalKeys": [
+      [
+        "Cust_Key"
+      ]
+    ],
+    "overrideSourceCacheSetting": true
+  }
+}

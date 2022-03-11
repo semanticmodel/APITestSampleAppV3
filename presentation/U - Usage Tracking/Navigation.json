@@ -1,0 +1,51 @@
+{
+  "presentationTable" : {
+    "name" : "Navigation",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Logical Navigation", "UT Summary Adv" ],
+    "presentationColumns" : [ {
+      "name" : "Logical SQL",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Logical SQL"
+    }, {
+      "name" : "Logical Query Id",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Navigation.Logical Query Id",
+      "alternateNames" : [ "LOGICAL_QUERY_ID" ]
+    }, {
+      "name" : "Logical Fact Table Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Navigation.Logical Fact Table Name"
+    }, {
+      "name" : "LTS Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Navigation.LTS Name",
+      "alternateNames" : [ "Lookup", "LTS Name (Lookup)" ]
+    }, {
+      "name" : "Query status",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Navigation.Query status",
+      "alternateNames" : [ "Querystatus" ]
+    }, {
+      "name" : "Query Grain level",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Navigation.Query Grain level",
+      "alternateNames" : [ "Query level", "Query level id vector", "Querylevelidvector" ]
+    }, {
+      "name" : "LTS Grain Level",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Navigation.LTS Grain Level",
+      "alternateNames" : [ "LTC Grain Level", "Source cell level id vector", "Sourcecelllevelidvector" ]
+    }, {
+      "name" : "Logical fact table id",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Navigation.Logical fact table id",
+      "alternateNames" : [ "Logicalfacttableid" ]
+    }, {
+      "name" : "LTS id",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Navigation.LTS id",
+      "alternateNames" : [ "Logicaltablesourceidvector" ]
+    } ]
+  }
+}

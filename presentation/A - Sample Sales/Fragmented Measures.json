@@ -1,0 +1,34 @@
+{
+  "presentationTable" : {
+    "name" : "Fragmented Measures",
+    "description" : "This folder contains Quota and Forecast Amt allocations derived based on Period Ago allocation rules.",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Federated Measures" ],
+    "presentationColumns" : [ {
+      "name" : "--- Time Based Fragmentation",
+      "description" : "Help :\r\nHeader object, dummy not to be used in any queries",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F0 Sales Base Measures.Dummy Object (Used for Pres Headers)",
+      "alternateNames" : [ "Dummy Object (Used for Pres Headers)" ]
+    }, {
+      "name" : "--- Dimension Based Fragmentation",
+      "description" : "Help :\r\nHeader object, dummy not to be used in any queries",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F0 Sales Base Measures.Dummy Object (Used for Pres Headers)",
+      "alternateNames" : [ "--- Time Based Fragmentation#1" ]
+    }, {
+      "name" : "5a  Target Rev  (Source A)",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F2 Fragmented Measures Targets.5a  Target Rev  (Source A)"
+    }, {
+      "name" : "5c  Total Target Rev  (Fragmented)",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F2 Fragmented Measures Targets.5c  Total Target Rev  (Fragmented)",
+      "alternateNames" : [ "5c  Target Rev  (Sum A + B)" ]
+    } ],
+    "localization" : {
+      "localizationKey" : "Fragmented Measures",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Federated_Measures)"
+    }
+  }
+}

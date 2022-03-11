@@ -1,0 +1,32 @@
+{
+  "presentationTable" : {
+    "name" : "Physical SQL",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Navigation#1" ],
+    "presentationColumns" : [ {
+      "name" : "Physical Sources",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Phys SQL.Physical Sources"
+    }, {
+      "name" : "Physical SQL",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Phys SQL.Physical SQL"
+    }, {
+      "name" : "Phys Sql Sequence Id",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Phys SQL.Phys Sql Sequence Id"
+    }, {
+      "name" : "Logical Query Id",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Phys SQL.Logical Query Id"
+    }, {
+      "name" : "Physical SQL Blob",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Phys SQL.Physical SQL Blob"
+    }, {
+      "name" : "Row Count",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT Phys SQL.Row Count"
+    } ]
+  }
+}

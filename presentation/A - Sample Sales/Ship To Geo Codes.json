@@ -1,0 +1,108 @@
+{
+  "presentationTable" : {
+    "name" : "Ship To Geo Codes",
+    "description" : "This folder contains Office Geographic details like latitude, longitude and so on.",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Bill To Geo Codes" ],
+    "presentationColumns" : [ {
+      "name" : "R68  Region Code",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R68  Region Code"
+    }, {
+      "name" : "R69  Area Code",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R69  Area Code"
+    }, {
+      "name" : "R61  Geo Country Code",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R61  Geo Country Code",
+      "localization" : {
+        "localizationKey" : "R61  Geo Country Code",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Geo_Codes_R61__Geo_Country_Code)"
+      }
+    }, {
+      "name" : "R62  Geo Ctry State Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R62  Geo Ctry State Name",
+      "localization" : {
+        "localizationKey" : "R62  Geo Ctry State Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Geo_Codes_R62__Geo_Ctry_State_Name)"
+      }
+    }, {
+      "name" : "R63  Geo Ctry State City Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R63  Geo Ctry State City Name",
+      "localization" : {
+        "localizationKey" : "R63  Geo Ctry State City Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Geo_Codes_R63__Geo_Ctry_State_City_Name)"
+      }
+    }, {
+      "name" : "R64  Latitude",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R64  Latitude",
+      "localization" : {
+        "localizationKey" : "R64  Latitude",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Geo_Codes_R64__Latitude)"
+      }
+    }, {
+      "name" : "R65  Longitude",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R65  Longitude",
+      "localization" : {
+        "localizationKey" : "R65  Longitude",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Geo_Codes_R65__Longitude)"
+      }
+    }, {
+      "name" : "R66  Lat_Long",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R66  Lat_Long",
+      "localization" : {
+        "localizationKey" : "R66  Lat_Long",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Geo_Codes_R66__Lat_Long)"
+      }
+    }, {
+      "name" : "R67  Geo Postal Code",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R67  Geo Postal Code"
+    }, {
+      "name" : "R68  Geo Establisht",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D7 Orders (Facts Attributes).R68  Geo Establisht"
+    } ],
+    "permissions" : [ {
+      "accessor" : "role:BIConsumer",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:gkendal",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BIAdministrator",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:weblogic",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:hmayes",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BIAuthor",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BISystem",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:satkins",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:abell",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:dnoonan",
+      "access" : "READ"
+    } ],
+    "localization" : {
+      "localizationKey" : "Ship To Geo Codes",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Ship_To_Geo_Codes)"
+    }
+  }
+}

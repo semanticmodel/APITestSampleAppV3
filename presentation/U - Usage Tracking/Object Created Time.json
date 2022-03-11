@@ -1,0 +1,53 @@
+{
+  "presentationTable" : {
+    "name" : "Object Created Time",
+    "description" : "nQuire Period Attributes",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Query Time#1" ],
+    "presentationColumns" : [ {
+      "name" : "Year",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Year"
+    }, {
+      "name" : "Year Month",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Year Month"
+    }, {
+      "name" : "Year Quarter",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Year Quarter"
+    }, {
+      "name" : "Month",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Month"
+    }, {
+      "name" : "Month Number",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Month Number"
+    }, {
+      "name" : "Day Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Day Name"
+    }, {
+      "name" : "Week Number",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Week Number"
+    }, {
+      "name" : "Day Number",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Day Number"
+    }, {
+      "name" : "Day in Month",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Day in Month"
+    }, {
+      "name" : "Date",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Date"
+    } ],
+    "localization" : {
+      "localizationKey" : "Object Created Time",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time)"
+    }
+  }
+}

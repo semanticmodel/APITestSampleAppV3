@@ -1,0 +1,15 @@
+{
+  "physicalTable": {
+    "name": "F17 Rev. (Siblings Aggr)",
+    "description": "ZZZ - Not yet filled\r\n\r\nReveue Siblings Aggregate Alias: For every Sales Rep, it stores the total Revenue of the Sales Rep plus all the siblings of the Sales Rep.",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.SAMP_REVENUE_F",
+    "caching": {
+      "enable": true
+    },
+    "additionalKeys": [
+      [
+        "Order_Key"
+      ]
+    ]
+  }
+}

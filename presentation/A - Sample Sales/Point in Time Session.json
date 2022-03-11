@@ -1,0 +1,37 @@
+{
+  "presentationTable" : {
+    "name" : "Point in Time Session",
+    "tags" : [ "Samp Relational" ],
+    "presentationColumns" : [ {
+      "name" : "SC0  Customer Number",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6b Customers (SCD Session).SC0  Customer Number"
+    }, {
+      "name" : "SC1  Customer Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6b Customers (SCD Session).SC1  Customer Name"
+    }, {
+      "name" : "SC5  End_Time",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6b Customers (SCD Session).SC5  End_Time"
+    }, {
+      "name" : "SC5  Start_Time",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6b Customers (SCD Session).SC5  Start_Time"
+    }, {
+      "name" : "SC7  Marital Status",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6b Customers (SCD Session).SC7  Marital Status"
+    }, {
+      "name" : "SC7x Changed Marital Status",
+      "description" : "Help : \r\nStores the customer segment ID.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6b Customers (SCD Session).SC7x Changed Marital Status"
+    }, {
+      "name" : "SC8  Income Level",
+      "description" : "Help : \r\nStores the customer industry description.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D6b Customers (SCD Session).SC8  Income Level"
+    } ]
+  }
+}

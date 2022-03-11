@@ -1,0 +1,51 @@
+{
+  "subjectArea" : {
+    "name" : "U - Usage Tracking",
+    "description" : "OBIEE Usage Monitoring Analytics and More",
+    "tags" : [ "Samp Relational" ],
+    "sourceBusinessModel" : "businessModel:Usage Tracking",
+    "implicitFactColumn" : "logicalColumn:Usage Tracking.UT L Query Facts.# of Queries",
+    "tableOrder" : [ {
+      "name" : "presentationTable:U - Usage Tracking.Usage Tracking",
+      "children" : [ {
+        "name" : "presentationTable:U - Usage Tracking.Users"
+      }, {
+        "name" : "presentationTable:U - Usage Tracking.Query"
+      }, {
+        "name" : "presentationTable:U - Usage Tracking.Query Time"
+      }, {
+        "name" : "presentationTable:U - Usage Tracking.Measures"
+      }, {
+        "name" : "presentationTable:U - Usage Tracking.Navigation"
+      }, {
+        "name" : "presentationTable:U - Usage Tracking.Physical SQL",
+        "children" : [ {
+          "name" : "presentationTable:U - Usage Tracking.SQL Time"
+        } ]
+      }, {
+        "name" : "presentationTable:U - Usage Tracking.Sessions"
+      } ]
+    }, {
+      "name" : "presentationTable:U - Usage Tracking.Webcat Statistics",
+      "children" : [ {
+        "name" : "presentationTable:U - Usage Tracking.Object Attributes",
+        "children" : [ {
+          "name" : "presentationTable:U - Usage Tracking.Webcat Path"
+        }, {
+          "name" : "presentationTable:U - Usage Tracking.Specific Object Types",
+          "children" : [ {
+            "name" : "presentationTable:U - Usage Tracking.Analysis"
+          }, {
+            "name" : "presentationTable:U - Usage Tracking.Dashboards"
+          }, {
+            "name" : "presentationTable:U - Usage Tracking.Prompts"
+          }, {
+            "name" : "presentationTable:U - Usage Tracking.Filters"
+          } ]
+        } ]
+      }, {
+        "name" : "presentationTable:U - Usage Tracking.Object Created Time"
+      } ]
+    } ]
+  }
+}

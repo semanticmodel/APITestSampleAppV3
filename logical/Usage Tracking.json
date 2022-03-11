@@ -1,0 +1,23 @@
+{
+  "businessModel" : {
+    "name" : "Usage Tracking",
+    "tags" : [ "Samp Relational" ],
+    "disable" : false,
+    "joins" : [ {
+      "leftTable" : "logicalTable:Usage Tracking.UT L Query Facts",
+      "rightTable" : "logicalTable:Usage Tracking.WS Objects Attributes",
+      "joinType" : "FULL_OUTER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "leftTable" : "logicalTable:Usage Tracking.UT L Query Facts",
+      "rightTable" : "logicalTable:Usage Tracking.UT Phys SQL",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    }, {
+      "leftTable" : "logicalTable:Usage Tracking.UT L Query Facts",
+      "rightTable" : "logicalTable:Usage Tracking.UT Navigation",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ZERO_OR_ONE"
+    } ]
+  }
+}

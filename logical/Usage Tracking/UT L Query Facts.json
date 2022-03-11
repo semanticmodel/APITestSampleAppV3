@@ -1,0 +1,555 @@
+{
+  "logicalTable" : {
+    "name" : "UT L Query Facts",
+    "tags" : [ "Samp Relational" ],
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "Avg Row Count",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ROW_COUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Total Time in Secs",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.TOTAL_TIME_SEC" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Avg Total Time In Secs",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : " TIMESTAMPDIFF( SQL_TSI_SECOND ,  TO_DATETIME( CAST (%1 AS VARCHAR ( 10 )) || ' ' || %2, 'DD-MON-YY hh24:mi'),  TO_DATETIME( CAST (%3 AS VARCHAR ( 10 )) || ' ' || %4, 'DD-MON-YY hh24:mi'))",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_TS", "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_HOUR_MIN", "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.END_TS", "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.END_HOUR_MIN" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Avg Compile Time In Secs",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.COMPILE_TIME_SEC" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Total Num dB Queries",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.NUM_DB_QUERY" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Avg Num dB Queries",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.NUM_DB_QUERY" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "# of Queries",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ID" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Total Time Spent in dB",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.CUM_DB_TIME_SEC" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Avg Time Spent in dB",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.CUM_DB_TIME_SEC" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "StartDate",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_DT" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "User Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.USER_NAME" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "QueryText",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.QUERY_TEXT" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Max Row Count",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ROW_COUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "MAX",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Max Total Time in Secs",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.TOTAL_TIME_SEC" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "MAX",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Max Compile Time in Secs",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.COMPILE_TIME_SEC" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "MAX",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Max Time Spent in dB",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.CUM_DB_TIME_SEC" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "MAX",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "StartHourMin",
+      "dataType" : "CHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_HOUR_MIN" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Number of cache entries inserted",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.NUM_CACHE_INSERTED" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Number of cache hits",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.NUM_CACHE_HITS" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Dashboard Count",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SAW_DASHBOARD" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Dashboard Page Count",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SAW_DASHBOARD_PG" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "Report Count",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SAW_SRC_PATH" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "# of Distinct Users",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.USER_NAME" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "% of Cache Hits",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CAST (%1 AS DOUBLE PRECISION ) / %2 * 100",
+          "expressionObjects" : [ "logicalColumn:Usage Tracking.UT L Query Facts.# of Queries Hitting Cache", "logicalColumn:Usage Tracking.UT L Query Facts.# of Queries" ]
+        }
+      },
+      "aggregation" : {
+        "rule" : "NONE",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "# of Queries Hitting Cache",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : " CASE  WHEN %1 = 'Y' THEN %2 END ",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.CACHE_IND_FLG", "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ID" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "# of Users",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.USER_NAME" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT",
+        "dataIsDense" : false,
+        "aggregateByLevels" : [ "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ]
+      }
+    }, {
+      "name" : "# of Sessions",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SESSION_ID" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Min Start Time",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : " TO_DATETIME( CAST (%1 AS VARCHAR ( 10 )) || ' ' || %2, 'DD-MON-YY hh24:mi')",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_TS", "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_HOUR_MIN" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "MIN",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Max End Time",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : " TO_DATETIME( CAST (%1 AS VARCHAR ( 10 )) || ' ' || %2, 'DD-MON-YY hh24:mi')",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.END_TS", "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.END_HOUR_MIN" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "MAX",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Minutes Start to End",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " TIMESTAMPDIFF( SQL_TSI_MINUTE , %1, %2)",
+          "expressionObjects" : [ "logicalColumn:Usage Tracking.UT L Query Facts.Min Start Time", "logicalColumn:Usage Tracking.UT L Query Facts.Max End Time" ]
+        }
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "NQSACCT",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Usage Tracking.UT L Query Time.Hour Min Detail", "logicalLevel:Usage Tracking.UT L Query.L SQL Detail", "logicalLevel:Usage Tracking.WS Objects Attributes.Path Detail", "logicalLevel:Usage Tracking.UT L Query Users.UT Users Detail", "logicalLevel:Usage Tracking.UT Navigation.UT Navigation", "logicalLevel:Usage Tracking.UT Phys SQL.Phys SQL Total" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ]
+  }
+}

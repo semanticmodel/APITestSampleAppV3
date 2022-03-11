@@ -1,0 +1,38 @@
+{
+  "physicalTable" : {
+    "name" : "WS_ANALYSIS",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "PATH",
+      "dataType" : "VARCHAR",
+      "length" : 400,
+      "nullable" : true
+    }, {
+      "name" : "SEQUENCEID",
+      "dataType" : "DOUBLE",
+      "length" : 15,
+      "nullable" : false
+    }, {
+      "name" : "SUBJECTAREA",
+      "dataType" : "VARCHAR",
+      "length" : 150,
+      "nullable" : true
+    }, {
+      "name" : "ANALYSISCOLUMN",
+      "dataType" : "VARCHAR",
+      "length" : 150,
+      "nullable" : true
+    }, {
+      "name" : "ANALYSISNAME",
+      "dataType" : "VARCHAR",
+      "length" : 150,
+      "nullable" : true
+    }, {
+      "name" : "ANALYSISTABLE",
+      "dataType" : "VARCHAR",
+      "length" : 150,
+      "nullable" : true
+    } ],
+    "additionalKeys" : [ [ "SEQUENCEID" ], [ "PATH" ] ]
+  }
+}

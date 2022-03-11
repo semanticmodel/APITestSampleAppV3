@@ -1,0 +1,160 @@
+{
+  "logicalTable" : {
+    "name" : "F80 Data Mining LTV Tree Facts",
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "M10 === LTV Classification Prediction ===",
+      "description" : "Help :\r\nHeader object, dummy not to be used in any queries",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "1"
+        }
+      }
+    }, {
+      "name" : "M13  Cust Probab Low LTV",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Cust LTV Tree Nodes",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1 * 100",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.M_PRED_PROB_L" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "M14  Cust Probab Medium LTV",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Cust LTV Tree Nodes",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1 * 100",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.M_PRED_PROB_M" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "M15  Cust Probab High LTV",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Cust LTV Tree Nodes",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1 * 100",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.M_PRED_PROB_H" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "M16  Cust Probab Very High LTV",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Cust LTV Tree Nodes",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1 * 100",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.M_PRED_PROB_VH" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "M17  Cust LTV Probability",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Cust LTV Tree Nodes",
+          "physicalExpression" : {
+            "expressionTemplate" : "100 *  CASE  WHEN %1 = 'HIGH' THEN %2 WHEN %1 = 'LOW' THEN %3 WHEN %1 = 'VERY HIGH' THEN %4 ELSE %5 END ",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.M_PRED_BIN", "physicalColumn:Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.M_PRED_PROB_H", "physicalColumn:Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.M_PRED_PROB_L", "physicalColumn:Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.M_PRED_PROB_VH", "physicalColumn:Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.M_PRED_PROB_M" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "M40 LTV Attribute Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 DBMS Explain LTV Tabe",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.D88 DBMS Explain LTV Tabe.ATTRIBUTE_NAME" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "M41 Explanatory Value",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 DBMS Explain LTV Tabe",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.D88 DBMS Explain LTV Tabe.EXPLANATORY_VALUE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "LTS1 Cust LTV Tree Nodes",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Sample App.D6 Customers (Snowflakes).Customers Detail", "logicalLevel:Sample App.D8 Data Mining Cust LTV Tree Nodes.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "LTS2 DBMS Explain LTV Tabe",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Sample App Data (ORCL).BISAMPLE.D88 DBMS Explain LTV Tabe" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ]
+  }
+}

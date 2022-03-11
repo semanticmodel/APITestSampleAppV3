@@ -1,0 +1,29 @@
+{
+  "presentationTable" : {
+    "name" : "Prompts",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Dashboard Prompt", "Prompts Attributes" ],
+    "presentationColumns" : [ {
+      "name" : "Prompt Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Prompt Name"
+    }, {
+      "name" : "Prompt Table",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Prompt Table"
+    }, {
+      "name" : "Prompt Column",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Prompt Column"
+    }, {
+      "name" : "Prompt Path",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Prompt Path"
+    }, {
+      "name" : "Prompt Subject Area",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Prompt Subject Area",
+      "alternateNames" : [ "Subject Area" ]
+    } ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "physicalTable": {
+    "name": "D86 Closure Table Cust LTV Nodes",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.ODM_LTV_PARENT_CHILD_MAP",
+    "additionalKeys": [
+      [
+        "MEMBER_KEY"
+      ]
+    ]
+  }
+}

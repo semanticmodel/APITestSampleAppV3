@@ -1,0 +1,12 @@
+{
+  "physicalTable": {
+    "name": "D54 Closure Table Sales Rep (Team Agg)",
+    "description": "ZZZ - Not yet filled",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.SAMP_EMPL_PARENT_CHILD_MAP",
+    "additionalKeys": [
+      [
+        "Member_Key"
+      ]
+    ]
+  }
+}

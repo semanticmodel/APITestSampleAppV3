@@ -1,0 +1,25 @@
+{
+  "presentationTable" : {
+    "name" : "Users",
+    "description" : "nQuire User(s) & Group(s) Information",
+    "tags" : [ "Samp Relational" ],
+    "presentationColumns" : [ {
+      "name" : "User Name",
+      "description" : "Actual User Name which is the default if not part of a group.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Users.User Name",
+      "localization" : {
+        "localizationKey" : "User Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Users_User_Name)"
+      }
+    }, {
+      "name" : "Impersonated User",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Users.Impersonated User"
+    } ],
+    "localization" : {
+      "localizationKey" : "Users",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Users)"
+    }
+  }
+}

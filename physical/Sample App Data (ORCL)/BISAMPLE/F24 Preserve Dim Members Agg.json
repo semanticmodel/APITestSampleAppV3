@@ -1,0 +1,6 @@
+{
+  "physicalTable": {
+    "name": "F24 Preserve Dim Members Agg",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.SAMP_DUAL Preserve Dim Members"
+  }
+}

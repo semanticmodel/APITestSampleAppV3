@@ -1,0 +1,15 @@
+{
+  "physicalTable": {
+    "name": "F19 Rev. (Converted)",
+    "description": "Reveue Currency Converted Fact Alias: Stores the converted fact information in different currencies.",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.SAMP_REVENUE_CURR_F",
+    "caching": {
+      "enable": true
+    },
+    "additionalKeys": [
+      [
+        "Order_Key"
+      ]
+    ]
+  }
+}

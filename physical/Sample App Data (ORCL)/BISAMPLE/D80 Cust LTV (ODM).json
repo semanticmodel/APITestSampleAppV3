@@ -1,0 +1,14 @@
+{
+  "physicalTable": {
+    "name": "D80 Cust LTV (ODM)",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.ODM_SAMP_CUSTOMERS_LTV",
+    "additionalKeys": [
+      [
+        "M_PRED_LTV_NODE"
+      ],
+      [
+        "CUST_KEY"
+      ]
+    ]
+  }
+}

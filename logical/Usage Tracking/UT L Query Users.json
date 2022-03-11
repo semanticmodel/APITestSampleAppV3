@@ -1,0 +1,72 @@
+{
+  "logicalTable" : {
+    "name" : "UT L Query Users",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "User Name" ],
+    "logicalColumns" : [ {
+      "name" : "User Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "S_NQ_ACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.USER_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "UT Users Detail"
+    }, {
+      "name" : "Impersonated User",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "S_NQ_ACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.IMPERSONATOR_USER_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "UT Users Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "S_NQ_ACCT",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Usage Tracking.UT L Query Users.UT Users Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "UT Users Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "UT Users Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "UT Users Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "User Name", "Impersonated User" ],
+        "displayKey" : "User Name"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "UT L Query Users",
+        "levels" : [ "UT Users Total", "UT Users Detail" ]
+      } ]
+    }
+  }
+}

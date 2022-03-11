@@ -1,0 +1,34 @@
+{
+  "presentationTable" : {
+    "name" : "Analysis",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Analysis Attributes" ],
+    "presentationColumns" : [ {
+      "name" : "Analysis Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Analysis Name"
+    }, {
+      "name" : "Analysis Subject Area",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Analysis Subject Area",
+      "alternateNames" : [ "Subject Area" ]
+    }, {
+      "name" : "Analysis Table",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Analysis Table"
+    }, {
+      "name" : "Analysis Column",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Analysis Column"
+    }, {
+      "name" : "Analysis Path",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Analysis Path"
+    }, {
+      "name" : "Analysis URL",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Analysis URL",
+      "alternateNames" : [ "Analysis Link" ]
+    } ]
+  }
+}

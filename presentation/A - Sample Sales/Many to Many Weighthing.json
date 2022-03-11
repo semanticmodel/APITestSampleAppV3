@@ -1,0 +1,55 @@
+{
+  "presentationTable" : {
+    "name" : "Many to Many Weighthing",
+    "description" : "This folder contains various Variation metrics on Revenue like Variations to Period Ago and Time span variations.",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Many to Many Weigthing", "MtoM Weigthed Aggr", "Time Span Variations#1" ],
+    "presentationColumns" : [ {
+      "name" : "8- Quota Amount",
+      "description" : "Help :\r\nQuota Amount data. Sources from Value physical column in 'Sample Quotas Fact' table. Grain of Quota Amount is Month.\r\n\r\n- Returns sum of data over any selected dimension",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F3 M:M Quotas Base Measures.8- Quota Amount"
+    }, {
+      "name" : "N1  Office",
+      "description" : "Help : \r\nStores the Market description.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D4 Offices and Channels (M:M Joins).N1  Office"
+    }, {
+      "name" : "N1k  Office Key",
+      "description" : "Help : \r\nMarket Key is an integer that uniquely identifies each record in the Market dimension table.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D4 Offices and Channels (M:M Joins).N1k  Office Key"
+    }, {
+      "name" : "N6  Channel Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D4 Offices and Channels (M:M Joins).N6  Channel Name"
+    }, {
+      "name" : "N6k  Channel Key",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D4 Offices and Channels (M:M Joins).N6k  Channel Key"
+    }, {
+      "name" : "N8  Chnl-Office Weight",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D4 Offices and Channels (M:M Joins).N8  Chnl-Office Weight"
+    }, {
+      "name" : "N2  Department",
+      "description" : "Help : \r\nStores the market area description.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D4 Offices and Channels (M:M Joins).N2  Department"
+    }, {
+      "name" : "N3  Organization",
+      "description" : "Help : \r\nStores the market district description.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D4 Offices and Channels (M:M Joins).N3  Organization"
+    }, {
+      "name" : "N4  Company",
+      "description" : "Help : \r\nStores the market region description.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D4 Offices and Channels (M:M Joins).N4  Company"
+    }, {
+      "name" : "71  Bridge Weighted Revenue (M:M)",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F0 Sales Base Measures.71  Bridge Weighted Revenue (M:M)"
+    } ]
+  }
+}

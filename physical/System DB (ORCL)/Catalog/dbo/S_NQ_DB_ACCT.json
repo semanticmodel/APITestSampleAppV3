@@ -1,0 +1,78 @@
+{
+  "physicalTable" : {
+    "name" : "S_NQ_DB_ACCT",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "ROW_COUNT",
+      "dataType" : "INT",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "END_HOUR_MIN",
+      "dataType" : "CHAR",
+      "length" : 5,
+      "nullable" : false
+    }, {
+      "name" : "END_DT",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "HASH_ID",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : false
+    }, {
+      "name" : "START_DT",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "QUERY_BLOB",
+      "dataType" : "LONGVARCHAR",
+      "length" : 4000,
+      "nullable" : true
+    }, {
+      "name" : "PHYSICAL_HASH_ID",
+      "dataType" : "VARCHAR",
+      "length" : 128,
+      "nullable" : false
+    }, {
+      "name" : "LOGICAL_QUERY_ID",
+      "dataType" : "VARCHAR",
+      "length" : 50,
+      "nullable" : true
+    }, {
+      "name" : "ID",
+      "dataType" : "INT",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "END_TS",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "START_TS",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "TIME_SEC",
+      "dataType" : "INT",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "START_HOUR_MIN",
+      "dataType" : "CHAR",
+      "length" : 5,
+      "nullable" : true
+    }, {
+      "name" : "QUERY_TEXT",
+      "dataType" : "VARCHAR",
+      "length" : 1024,
+      "nullable" : false
+    } ],
+    "additionalKeys" : [ [ "LOGICAL_QUERY_ID" ] ]
+  }
+}

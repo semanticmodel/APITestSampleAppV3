@@ -1,0 +1,76 @@
+{
+  "presentationTable" : {
+    "name" : "Actions Entries",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Actions Entries (WIP)" ],
+    "presentationColumns" : [ {
+      "name" : "ID",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F93 Actions Entries.ID",
+      "localization" : {
+        "localizationKey" : "ID",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_ID)"
+      }
+    }, {
+      "name" : "Flag",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F93 Actions Entries.Flag",
+      "localization" : {
+        "localizationKey" : "Flag",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Flag)"
+      }
+    }, {
+      "name" : "Message",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F93 Actions Entries.Message",
+      "localization" : {
+        "localizationKey" : "Message",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Message)"
+      }
+    }, {
+      "name" : "Message Type",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F93 Actions Entries.Message Type",
+      "localization" : {
+        "localizationKey" : "Message Type",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Message_Type)"
+      }
+    }, {
+      "name" : "Order Id",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F93 Actions Entries.Order Id",
+      "localization" : {
+        "localizationKey" : "Order Id",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Order_Id)"
+      }
+    }, {
+      "name" : "Status",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F93 Actions Entries.Status",
+      "localization" : {
+        "localizationKey" : "Status",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Status)"
+      }
+    }, {
+      "name" : "Timestamp",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F93 Actions Entries.Timestamp",
+      "localization" : {
+        "localizationKey" : "Timestamp",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Timestamp)"
+      }
+    }, {
+      "name" : "Userid",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F93 Actions Entries.Userid",
+      "localization" : {
+        "localizationKey" : "Userid",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Userid)"
+      }
+    } ],
+    "localization" : {
+      "localizationKey" : "Actions Entries",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries)"
+    }
+  }
+}

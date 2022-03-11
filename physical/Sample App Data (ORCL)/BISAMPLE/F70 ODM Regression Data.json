@@ -1,0 +1,6 @@
+{
+  "physicalTable": {
+    "name": "F70 ODM Regression Data",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.ODM_REVENUE_F_EXT"
+  }
+}

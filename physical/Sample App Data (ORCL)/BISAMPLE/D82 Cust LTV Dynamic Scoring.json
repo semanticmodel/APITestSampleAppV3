@@ -1,0 +1,11 @@
+{
+  "physicalTable": {
+    "name": "D82 Cust LTV Dynamic Scoring",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.ODM_SAMP_CUST_LTV_DYNAMIC",
+    "additionalKeys": [
+      [
+        "CUST_KEY"
+      ]
+    ]
+  }
+}

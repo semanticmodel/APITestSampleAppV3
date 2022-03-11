@@ -1,0 +1,170 @@
+{
+  "presentationTable" : {
+    "name" : "Query Time",
+    "description" : "nQuire Period Attributes",
+    "tags" : [ "Samp Relational" ],
+    "presentationColumns" : [ {
+      "name" : "Start Date",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Start Date",
+      "alternateNames" : [ "Start Date#1" ]
+    }, {
+      "name" : "Day in Month",
+      "description" : "Actual Day within the month.  Valid Values are 1-31 and change by month.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Day in Month",
+      "localization" : {
+        "localizationKey" : "Day in Month",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Day_in_Month)"
+      }
+    }, {
+      "name" : "Week Number",
+      "description" : "Actual Week Number 1-52 Valid Values.  First Week in January = 1.  This accounts for leap year.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Week Number",
+      "localization" : {
+        "localizationKey" : "Week Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Week_Number)"
+      }
+    }, {
+      "name" : "Ran",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Ran"
+    }, {
+      "name" : "Start Time",
+      "description" : "Actual Request Date that follows a MMM DD, CCYY format. For example June 9, 1999.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Start Time",
+      "localization" : {
+        "localizationKey" : "Start Time",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Date)"
+      }
+    }, {
+      "name" : "Start Hour Min",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Start Hour Min",
+      "alternateNames" : [ "Star Hour Min" ]
+    }, {
+      "name" : "End Time",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.End Time"
+    }, {
+      "name" : "End Hour Min",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.End Hour Min"
+    }, {
+      "name" : "Year",
+      "description" : "Actual Year that the request was generated to the nQuire Server.  Format is 1999, 2000 etc...",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Year",
+      "localization" : {
+        "localizationKey" : "Year",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Year)"
+      }
+    }, {
+      "name" : "Year Quarter",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Year Quarter",
+      "localization" : {
+        "localizationKey" : "Year Quarter",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Year_Quarter)"
+      }
+    }, {
+      "name" : "Year Month",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Year Month",
+      "localization" : {
+        "localizationKey" : "Year Month",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Year_Month)"
+      }
+    }, {
+      "name" : "Month",
+      "description" : "Actual Month Name in long Format MMMMMMM Valid Values are January, March etc...",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Month",
+      "localization" : {
+        "localizationKey" : "Month",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Month)"
+      }
+    }, {
+      "name" : "Month Number",
+      "description" : "Actual Month Number starting with 1 = January thru 12 = December.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Month Number",
+      "localization" : {
+        "localizationKey" : "Month Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Month_Number)"
+      }
+    }, {
+      "name" : "Day Name",
+      "description" : "Actual Weekday/Weekend Day.  Valid Values are Monday - Sunday.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Day Name",
+      "localization" : {
+        "localizationKey" : "Day Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Day_Name)"
+      }
+    }, {
+      "name" : "Day Number",
+      "description" : "Actual Day Number within a week.  Valid Values are 1-7.  1 = Sunday - 7 = Saturday.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Day Number",
+      "localization" : {
+        "localizationKey" : "Day Number",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Day_Number)"
+      }
+    }, {
+      "name" : "Start Timestamp",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.Start Timestamp"
+    }, {
+      "name" : "End Timestamp",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query Time.End Timestamp"
+    } ],
+    "hierarchies" : [ {
+      "name" : "UT Time Query Run",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalTable" : "logicalTable:Usage Tracking.UT L Query Time",
+      "levels" : [ {
+        "name" : "TotalTime",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.UT L Query Time.TotalTime"
+      }, {
+        "name" : "Year",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.UT L Query Time.Year",
+        "displayColumn" : "presentationColumn:U - Usage Tracking.Query Time.Year"
+      }, {
+        "name" : "Quarter",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.UT L Query Time.Quarter",
+        "displayColumn" : "presentationColumn:U - Usage Tracking.Query Time.Year Quarter"
+      }, {
+        "name" : "Month",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.UT L Query Time.Month",
+        "displayColumn" : "presentationColumn:U - Usage Tracking.Query Time.Year Month"
+      }, {
+        "name" : "Week Number",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.UT L Query Time.Week Number",
+        "displayColumn" : "presentationColumn:U - Usage Tracking.Query Time.Week Number"
+      }, {
+        "name" : "Date",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.UT L Query Time.Date",
+        "displayColumn" : "presentationColumn:U - Usage Tracking.Query Time.Start Time"
+      }, {
+        "name" : "Hour Min",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.UT L Query Time.Hour Min Detail",
+        "displayColumn" : "presentationColumn:U - Usage Tracking.Query Time.Start Hour Min"
+      } ]
+    } ],
+    "localization" : {
+      "localizationKey" : "Query Time",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time)"
+    }
+  }
+}

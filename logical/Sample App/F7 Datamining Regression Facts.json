@@ -1,0 +1,182 @@
+{
+  "logicalTable" : {
+    "name" : "F7 Datamining Regression Facts",
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "M00 === Mining Regression Model ====",
+      "description" : "Help :\r\nHeader object, dummy not to be used in any queries",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "1"
+        }
+      }
+    }, {
+      "name" : "M01- Actual Revenue",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F70 ODM Regression Data",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.F70 ODM Regression Data.M_REVENUE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "M02- Expected Rev",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F71 ODM Regression Results",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.F71 ODM Regression Results.M_REVENUE_EXPECT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "M03- Dyn Expected Rev",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F71 ODM Regression Results",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.F71 ODM Regression Results.M_REVENUE_EXPECT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "M05- Actual as % of Exptd",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CAST (%1 AS DOUBLE PRECISION ) / %2 * 100",
+          "expressionObjects" : [ "logicalColumn:Sample App.F7 Datamining Regression Facts.M01- Actual Revenue", "logicalColumn:Sample App.F7 Datamining Regression Facts.M02- Expected Rev" ]
+        }
+      }
+    }, {
+      "name" : "M06- Actual Diff to Exptd",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CAST (%1 AS DOUBLE PRECISION ) - %2",
+          "expressionObjects" : [ "logicalColumn:Sample App.F7 Datamining Regression Facts.M01- Actual Revenue", "logicalColumn:Sample App.F7 Datamining Regression Facts.M02- Expected Rev" ]
+        }
+      }
+    }, {
+      "name" : "M07- Actual as % of Dyn Exptd",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CAST (%1 AS DOUBLE PRECISION ) / %2 * 100",
+          "expressionObjects" : [ "logicalColumn:Sample App.F7 Datamining Regression Facts.M01- Actual Revenue", "logicalColumn:Sample App.F7 Datamining Regression Facts.M03- Dyn Expected Rev" ]
+        }
+      }
+    }, {
+      "name" : "M08- Actual Diff to Dyn Exptd",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CAST (%1 AS DOUBLE PRECISION ) - %2",
+          "expressionObjects" : [ "logicalColumn:Sample App.F7 Datamining Regression Facts.M01- Actual Revenue", "logicalColumn:Sample App.F7 Datamining Regression Facts.M03- Dyn Expected Rev" ]
+        }
+      }
+    }, {
+      "name" : "M09- Dyn Exptd as % of Exptd",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : " CAST (%1 AS DOUBLE PRECISION ) / %2 * 100",
+          "expressionObjects" : [ "logicalColumn:Sample App.F7 Datamining Regression Facts.M03- Dyn Expected Rev", "logicalColumn:Sample App.F7 Datamining Regression Facts.M02- Expected Rev" ]
+        }
+      }
+    }, {
+      "name" : "M00- Original Revenue",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "F70 ODM Regression Data",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Revenue" ]
+          }
+        }, {
+          "logicalTableSource" : "F71 ODM Regression Results",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Revenue" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "F70 ODM Regression Data",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Sample App Data (ORCL).BISAMPLE.F10 Billed Rev", "physicalTable:Sample App Data (ORCL).BISAMPLE.F70 ODM Regression Data" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+          "rightTable" : "physicalTable:Sample App Data (ORCL).BISAMPLE.F70 ODM Regression Data",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "F71 ODM Regression Results",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Sample App Data (ORCL).BISAMPLE.F10 Billed Rev", "physicalTable:Sample App Data (ORCL).BISAMPLE.F71 ODM Regression Results" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+          "rightTable" : "physicalTable:Sample App Data (ORCL).BISAMPLE.F71 ODM Regression Results",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "presentationTable" : {
+    "name" : "Query",
+    "description" : "nQuire Topics include: Subject Areas and Logical SQL",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Topic" ],
+    "presentationColumns" : [ {
+      "name" : "Repository Name",
+      "description" : "Actual Name that is loaded and available on the nQuire Server in the Config File.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Repository Name",
+      "localization" : {
+        "localizationKey" : "Repository Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Topic_Repository_Name)"
+      }
+    }, {
+      "name" : "Subject Area Name",
+      "description" : "Available option in the presentation layer within nQuire metadata.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Subject Area Name",
+      "localization" : {
+        "localizationKey" : "Subject Area Name",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Topic_Subject_Area_Name)"
+      }
+    }, {
+      "name" : "UT Row Id",
+      "description" : "Actual Logial SQL passed to the nQuire Server for a request.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.UT Row Id",
+      "localization" : {
+        "localizationKey" : "UT Row Id",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Topic_Logical_SQL)"
+      }
+    }, {
+      "name" : "Node ID",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Node ID"
+    }, {
+      "name" : "Query Type",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Query Type"
+    }, {
+      "name" : "Cache Hit Indicator",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Cache Hit Indicator"
+    }, {
+      "name" : "Webcat Path",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Webcat Path"
+    }, {
+      "name" : "Dashboard",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Dashboard"
+    }, {
+      "name" : "Dashboard Page",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Dashboard Page"
+    }, {
+      "name" : "Presentation Catalog",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Presentation Catalog"
+    }, {
+      "name" : "Logical Query Key",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Logical Query Key",
+      "alternateNames" : [ "Query Key" ]
+    }, {
+      "name" : "Logical Query Blob",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Logical Query Blob",
+      "alternateNames" : [ "Query Blob" ]
+    }, {
+      "name" : "Succes Flag",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Succes Flag"
+    }, {
+      "name" : "Logical SQL",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Logical SQL",
+      "alternateNames" : [ "Logical SQL#1" ]
+    }, {
+      "name" : "Error Text",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.UT L Query.Error Text"
+    } ],
+    "localization" : {
+      "localizationKey" : "Query",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Topic)"
+    }
+  }
+}

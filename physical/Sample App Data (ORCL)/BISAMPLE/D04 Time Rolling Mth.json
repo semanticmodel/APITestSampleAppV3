@@ -1,0 +1,12 @@
+{
+  "physicalTable": {
+    "name": "D04 Time Rolling Mth",
+    "description": "Time Rolling Month Alias: This is specifically used to join to the Fact Rolling alias, to derive Rolling month facts.",
+    "sourceTable": "physicalTable:Sample App Data (ORCL).BISAMPLE.SAMP_TIME_MTH_D",
+    "additionalKeys": [
+      [
+        "Mth_Key"
+      ]
+    ]
+  }
+}

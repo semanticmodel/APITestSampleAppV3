@@ -1,0 +1,78 @@
+{
+  "presentationTable" : {
+    "name" : "Dashboards",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "Dashboard", "Dashboards Attributes" ],
+    "presentationColumns" : [ {
+      "name" : "Dashboard Page URL",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Dashboard Page URL",
+      "alternateNames" : [ "Dashboard Page Link" ]
+    }, {
+      "name" : "Dashboard Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Dashboard Name"
+    }, {
+      "name" : "Dashboard Style",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Dashboard Style"
+    }, {
+      "name" : "Dashboard Folder",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Dashboard Folder"
+    }, {
+      "name" : "Dashboard Path",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Dashboard Path"
+    }, {
+      "name" : "Dashboard Page Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Dashboard Page Name"
+    }, {
+      "name" : "Dashboard Page Path",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Dashboard Page Path"
+    }, {
+      "name" : "Dashboard Analysis Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Dashboard Analysis Name",
+      "alternateNames" : [ "Analysis Name" ]
+    }, {
+      "name" : "Dashboard Analysis Path",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Dashboard Analysis Path",
+      "alternateNames" : [ "Analysis Path" ]
+    }, {
+      "name" : "Dashboard Catalog URL",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Dashboard Catalog URL",
+      "alternateNames" : [ "Dashboard Catalog Link", "Dashboard Folder Link" ]
+    }, {
+      "name" : "Dashboard URL",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Dashboard URL"
+    } ],
+    "hierarchies" : [ {
+      "name" : "Dashboard Hierarchy",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalTable" : "logicalTable:Usage Tracking.WS Objects Attributes",
+      "alternateNames" : [ "Dashbo", "Dashboar", "WS All Objects Dim" ],
+      "levels" : [ {
+        "name" : "Root Folder",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.WS Objects Attributes.Root Folder",
+        "displayColumn" : "presentationColumn:U - Usage Tracking.Dashboards.Dashboard Folder"
+      }, {
+        "name" : "Dashboard",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.WS Objects Attributes.Dashboard",
+        "displayColumn" : "presentationColumn:U - Usage Tracking.Dashboards.Dashboard URL"
+      }, {
+        "name" : "Page",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.WS Objects Attributes.Page",
+        "displayColumn" : "presentationColumn:U - Usage Tracking.Dashboards.Dashboard Page URL"
+      } ]
+    } ]
+  }
+}

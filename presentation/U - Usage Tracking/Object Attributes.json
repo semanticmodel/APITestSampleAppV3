@@ -1,0 +1,57 @@
+{
+  "presentationTable" : {
+    "name" : "Object Attributes",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "All Common Attributes", "All Generic Attributes", "Analysis Attributes#1" ],
+    "presentationColumns" : [ {
+      "name" : "Description",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Description"
+    }, {
+      "name" : "Folder",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Folder"
+    }, {
+      "name" : "Object Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Object Name"
+    }, {
+      "name" : "Owner",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Owner"
+    }, {
+      "name" : "Object Type",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Object Type"
+    }, {
+      "name" : "Signature",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Signature"
+    }, {
+      "name" : "Created Time",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Created Time"
+    }, {
+      "name" : "Last Modified Time",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Usage Tracking.WS Objects Attributes.Last Modified Time"
+    } ],
+    "hierarchies" : [ {
+      "name" : "Object Type Hier",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalTable" : "logicalTable:Usage Tracking.WS Objects Attributes",
+      "alternateNames" : [ "WS All Objects Dim" ],
+      "levels" : [ {
+        "name" : "Object Type",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.WS Objects Attributes.Object Type",
+        "displayColumn" : "presentationColumn:U - Usage Tracking.Object Attributes.Object Type"
+      }, {
+        "name" : "Signature",
+        "tags" : [ "Samp Relational" ],
+        "sourceLogicalLevel" : "logicalLevel:Usage Tracking.WS Objects Attributes.Signature",
+        "displayColumn" : "presentationColumn:U - Usage Tracking.Object Attributes.Signature"
+      } ]
+    } ]
+  }
+}

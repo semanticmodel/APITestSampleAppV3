@@ -1,0 +1,20 @@
+{
+  "presentationTable" : {
+    "name" : "Prompt LOVs",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "L2 Lookups Other" ],
+    "presentationColumns" : [ {
+      "name" : "Lookup_Type",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.L2 Lookups Other.Lookup_Type"
+    }, {
+      "name" : "Lookup_Dsc",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.L2 Lookups Other.Lookup_Dsc"
+    }, {
+      "name" : "Language_Key",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.L2 Lookups Other.Language_Key"
+    } ]
+  }
+}

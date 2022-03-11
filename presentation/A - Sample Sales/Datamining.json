@@ -1,0 +1,150 @@
+{
+  "presentationTable" : {
+    "name" : "Datamining",
+    "tags" : [ "Samp Relational" ],
+    "alternateNames" : [ "F27" ],
+    "presentationColumns" : [ {
+      "name" : "M00 === Mining Regression Model ====",
+      "description" : "Help :\r\nHeader object, dummy not to be used in any queries",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F7 Datamining Regression Facts.M00 === Mining Regression Model ===="
+    }, {
+      "name" : "M01- Actual Revenue",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F7 Datamining Regression Facts.M01- Actual Revenue"
+    }, {
+      "name" : "M02- Expected Rev",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F7 Datamining Regression Facts.M02- Expected Rev"
+    }, {
+      "name" : "M03- Dyn Expected Rev",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F7 Datamining Regression Facts.M03- Dyn Expected Rev"
+    }, {
+      "name" : "M05- Actual as % of Exptd",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F7 Datamining Regression Facts.M05- Actual as % of Exptd"
+    }, {
+      "name" : "M06- Actual Diff to Exptd",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F7 Datamining Regression Facts.M06- Actual Diff to Exptd"
+    }, {
+      "name" : "M07- Actual as % of Dyn Exptd",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F7 Datamining Regression Facts.M07- Actual as % of Dyn Exptd"
+    }, {
+      "name" : "M08- Actual Diff to Dyn Exptd",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F7 Datamining Regression Facts.M08- Actual Diff to Dyn Exptd"
+    }, {
+      "name" : "M09- Dyn Exptd as % of Exptd",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F7 Datamining Regression Facts.M09- Dyn Exptd as % of Exptd"
+    }, {
+      "name" : "M10 === LTV Classification Prediction ===",
+      "description" : "Help :\r\nHeader object, dummy not to be used in any queries",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F80 Data Mining LTV Tree Facts.M10 === LTV Classification Prediction ==="
+    }, {
+      "name" : "M11  Cust Predicted Leaf Node",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M11  Cust Predicted Leaf Node"
+    }, {
+      "name" : "M12  Cust Predicted LTV",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M12  Cust Predicted LTV"
+    }, {
+      "name" : "M13  Cust Probab Low LTV",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F80 Data Mining LTV Tree Facts.M13  Cust Probab Low LTV"
+    }, {
+      "name" : "M14  Cust Probab Medium LTV",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F80 Data Mining LTV Tree Facts.M14  Cust Probab Medium LTV"
+    }, {
+      "name" : "M15  Cust Probab High LTV",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F80 Data Mining LTV Tree Facts.M15  Cust Probab High LTV"
+    }, {
+      "name" : "M16  Cust Probab Very High LTV",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F80 Data Mining LTV Tree Facts.M16  Cust Probab Very High LTV"
+    }, {
+      "name" : "M17  Cust LTV Probability",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F80 Data Mining LTV Tree Facts.M17  Cust LTV Probability"
+    }, {
+      "name" : "M20 === LTV Tree Nodes ===",
+      "description" : "Help :\r\nHeader object, dummy not to be used in any queries",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M20 === LTV Tree Nodes ==="
+    }, {
+      "name" : "M20 Tree Node",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M20 Tree Node"
+    }, {
+      "name" : "M21 Node #",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M21 Node #"
+    }, {
+      "name" : "M22 Local Rule",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M22 Local Rule"
+    }, {
+      "name" : "M23 Full Rule",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M23 Full Rule"
+    }, {
+      "name" : "M24 Node Total Individuals",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M24 Node Total Individuals"
+    }, {
+      "name" : "M25 Parent Node",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M25 Parent Node"
+    }, {
+      "name" : "M26 Is Leaf",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M26 Is Leaf"
+    }, {
+      "name" : "M32 Dynamic Score Local Rule",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M32 Dynamic Score Local Rule"
+    }, {
+      "name" : "M33 Dynamic Score Full Rule",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M33 Dynamic Score Full Rule"
+    }, {
+      "name" : "M34 Dynamic Pred Leaf Node",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M34 Dynamic Pred Leaf Node"
+    }, {
+      "name" : "M35  Dynamic Predicted LTV",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M35  Dynamic Predicted LTV"
+    }, {
+      "name" : "M36 Dynamic Score Probability",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M36 Dynamic Score Probability"
+    }, {
+      "name" : "M40 LTV Attribute Name",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F80 Data Mining LTV Tree Facts.M40 LTV Attribute Name"
+    }, {
+      "name" : "M41 Explanatory Value",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.F80 Data Mining LTV Tree Facts.M41 Explanatory Value"
+    }, {
+      "name" : "M29 Node Hier LTV Prediction",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D8 Data Mining Cust LTV Tree Nodes.M29 Node Hier LTV Prediction"
+    } ],
+    "hierarchies" : [ {
+      "name" : "LTV Classification Tree",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalTable" : "logicalTable:Sample App.D8 Data Mining Cust LTV Tree Nodes",
+      "displayColumn" : "presentationColumn:A - Sample Sales.Datamining.M20 Tree Node",
+      "alternateNames" : [ "H8 LTV Classification" ]
+    } ]
+  }
+}

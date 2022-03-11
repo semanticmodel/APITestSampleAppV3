@@ -1,0 +1,378 @@
+{
+  "logicalTable" : {
+    "name" : "UT L Query",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "UT Row Id" ],
+    "logicalColumns" : [ {
+      "name" : "Repository Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.REPOSITORY_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Repository"
+    }, {
+      "name" : "Subject Area Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.SUBJECT_AREA_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Logical SA"
+    }, {
+      "name" : "Node ID",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.NODE_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "UT Row Id",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "L SQL Detail"
+    }, {
+      "name" : "Query Type",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.QUERY_SRC_CD" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Cache Hit Indicator",
+      "dataType" : "CHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.CACHE_IND_FLG" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Webcat Path",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : " IFNULL(%1, 'Ad Hoc Query')",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.SAW_SRC_PATH" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Dashboard",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : " REPLACE( REPLACE(%1, '/_portal', ' '), '/shared/', ' ')",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.SAW_DASHBOARD" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Dashboard Page",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.SAW_DASHBOARD_PG" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Presentation Catalog",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.PRESENTATION_NAME" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Logical Query Key",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.QUERY_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Logical Query Blob",
+      "dataType" : "LONGVARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.QUERY_BLOB" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Succes Flag",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.SUCCESS_FLG" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Logical SQL",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.QUERY_TEXT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "L SQL Detail"
+    }, {
+      "name" : "Error Text",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.ERROR_TEXT" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Hash ID",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.HASH_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "S_NQ_ACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.HASH_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Session ID",
+      "dataType" : "DOUBLE",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.SESSION_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "S_NQ_ACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SESSION_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "EC ID",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.ECID" ]
+          }
+        }, {
+          "logicalTableSource" : "S_NQ_ACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ECID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Tenant ID",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.TENANT_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "S_NQ_ACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.TENANT_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Service Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "NQSACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.SERVICE_NAME" ]
+          }
+        }, {
+          "logicalTableSource" : "S_NQ_ACCT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SERVICE_NAME" ]
+          }
+        } ]
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "NQSACCT",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "S_NQ_ACCT",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:System DB (ORCL).Catalog.dbo.S_NQ_ACCT" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total L Query",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total L Query",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Repository",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Repository Name" ],
+        "displayKey" : "Repository Name"
+      }, {
+        "name" : "Logical SA",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Subject Area Name" ],
+        "displayKey" : "Subject Area Name"
+      }, {
+        "name" : "L SQL Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "UT Row Id" ],
+        "displayKey" : "UT Row Id"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "UT L Query [branch at level 'Logical SA']",
+        "levels" : [ "Total L Query", "Repository", "Logical SA", "L SQL Detail" ]
+      } ]
+    }
+  }
+}

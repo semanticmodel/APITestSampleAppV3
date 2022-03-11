@@ -1,0 +1,128 @@
+{
+  "presentationTable" : {
+    "name" : "More Office Objects",
+    "description" : "This folder contains additional Office attributes like Office Channel, Channel Attributes and so on.",
+    "tags" : [ "Samp Relational" ],
+    "presentationColumns" : [ {
+      "name" : "D1k  Office Key",
+      "description" : "Help : \r\nMarket Key is an integer that uniquely identifies each record in the Market dimension table.",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.D1k  Office Key",
+      "localization" : {
+        "localizationKey" : "D1k  Office Key",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects_D1k__Office_Key)"
+      }
+    }, {
+      "name" : "D3k  Org Key",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.D3k  Org Key",
+      "localization" : {
+        "localizationKey" : "D3k  Org Key",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects_D3k__Org_Key)"
+      }
+    }, {
+      "name" : "D2k  Dept Key",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.D2k  Dept Key",
+      "localization" : {
+        "localizationKey" : "D2k  Dept Key",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects_D2k__Dept_Key)"
+      }
+    }, {
+      "name" : "D4k  Company Key",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.D4k  Company Key",
+      "localization" : {
+        "localizationKey" : "D4k  Company Key",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects_D4k__Company_Key)"
+      }
+    }, {
+      "name" : "D8  Office Sequence",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.D8  Office Sequence",
+      "permissions" : [ {
+        "accessor" : "role:DEFAULT",
+        "access" : "WRITE"
+      }, {
+        "accessor" : "user:sbergma",
+        "access" : "WRITE"
+      }, {
+        "accessor" : "role:BIConsumer",
+        "access" : "WRITE"
+      }, {
+        "accessor" : "user:gkendal",
+        "access" : "WRITE"
+      }, {
+        "accessor" : "role:BIAdministrator",
+        "access" : "WRITE"
+      }, {
+        "accessor" : "user:weblogic",
+        "access" : "WRITE"
+      }, {
+        "accessor" : "user:hmayes",
+        "access" : "WRITE"
+      }, {
+        "accessor" : "role:BIAuthor",
+        "access" : "WRITE"
+      }, {
+        "accessor" : "role:BISystem",
+        "access" : "WRITE"
+      }, {
+        "accessor" : "user:satkins",
+        "access" : "WRITE"
+      }, {
+        "accessor" : "user:abell",
+        "access" : "WRITE"
+      }, {
+        "accessor" : "user:dnoonan",
+        "access" : "WRITE"
+      } ],
+      "localization" : {
+        "localizationKey" : "D8  Office Sequence",
+        "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects_D8__Office_Sequence)"
+      }
+    }, {
+      "name" : "D99  Total Value (Hier)",
+      "tags" : [ "Samp Relational" ],
+      "sourceLogicalColumn" : "logicalColumn:Sample App.D3 Offices.D99  Total Value (Hier)",
+      "hideIfTrue" : {
+        "expressionTemplate" : "1"
+      }
+    } ],
+    "permissions" : [ {
+      "accessor" : "role:BIConsumer",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:gkendal",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BIAdministrator",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:weblogic",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:hmayes",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BIAuthor",
+      "access" : "READ"
+    }, {
+      "accessor" : "role:BISystem",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:satkins",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:abell",
+      "access" : "READ"
+    }, {
+      "accessor" : "user:dnoonan",
+      "access" : "READ"
+    } ],
+    "localization" : {
+      "localizationKey" : "More Office Objects",
+      "nameVariable" : "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects)"
+    }
+  }
+}
